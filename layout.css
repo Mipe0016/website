@@ -14,12 +14,12 @@ a {
 ul {
   background-color: #007d8b;
 }
-div {
+.logo {
   background-color: #007d8b;
 }
 
 header .logo a {
-  color: #000000;
+  color: #e3e3e3;
   font-size: 2rem;
   text-decoration: none;
   transition: color 0.3s;
@@ -52,7 +52,7 @@ nav {
 .menu a {
   display: block;
   padding: 10px;
-  color: #000000;
+  color: #e3e3e3;
   text-decoration: none;
   transition: color 0.3s;
   text-align: end;
@@ -68,15 +68,92 @@ nav {
   }
 }
 
-.section.grid_2-1 {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
+/************ FORSIDE ************/
+
+@media (min-width: 800px) {
+  .grid_2-1 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+  }
+
+  .col {
+    display: flex;
+  }
+
+  .grid_1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .col order {
+    order: -1;
+  }
+
+  dl {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
 }
 
-.col {
-  display: flex;
+/************ MIN COMPUTER ************/
+@media (min-width: 800px) {
 }
 
-.colorder {
-  display: flex;
+/************ OPERATIVSYSTEMER ************/
+@media (min-width: 800px) {
+  .grid_5-3 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+  .grid_2-3 {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .grid_3-2 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+/************ KOMPONENTER ************/
+
+@media (min-width: 800px) {
+  .grid_1-1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  .flex_col {
+    justify-content: space-evenly;
+  }
+}
+
+/************ GALLERI ************/
+@media (min-width: 800px) {
+  .grid_1-1-1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-rows: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+  }
+
+  .img1 {
+    grid-row: span 2;
+    grid-column: span 2;
+  }
+  .img4 {
+    grid-column: span 2;
+  }
+  .img5 {
+    grid-column: 2/5;
+  }
+
+  .img6 {
+    grid-row: 3;
+  }
 }
